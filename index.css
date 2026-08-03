@@ -1,13 +1,17 @@
+:root {
+  --light-grey: #f4f6f9;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   background: #f4f6f9;
   min-height: 100vh;  /*ensures the body takes up the full height of the viewport*/
+  overflow-x: hidden;
 }
 
 html {
@@ -15,30 +19,86 @@ html {
 }
 
 header {
+  position: static;
+  top: 60px;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  display: flex;
+  padding: 1.2rem 5%;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap; /* preventing text from wrapping to the next line */
+}
+
+header .logo a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+header .navbar {
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap; /* preventing text from wrapping to the next line */
+  padding-right: 400px; /* Adjust this value based on the width of your left section */
+}
+
+header .navbar a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+}
+
+header .enter {
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap; /* preventing text from wrapping to the next line */
+}
+
+header .enter a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 0.3px solid #000;
+  border-radius: 12px;
+  vertical-align: middle; /* Aligns the text vertically in the middle */
+}
+
+.top {
   display: flex;   /*makes all the lements stay on a line*/
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 12px 480px;     /*gives space all around the header*/
-  width: 100%;
-  height: 60px;
-  gap: 20px;
+  padding: 0 12px;     /*gives space all around the header*/
+  height: 50px;
+  gap: 8px;
   align-items: center;
-  justify-content: space-between;
   background: white;
-  border-bottom: #f1f1f1 solid 1px;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .head {
   display: flex;
   align-items: center;
   gap: 10px;
-  /*width: auto;*/
+  width: 100%;
 }
 
-.head i :not(.red):not(.yellow):not(.green) {
+.head i:not(.red):not(.yellow):not(.green) {
   font-size: 2.5rem;
   color: #666;
 }
@@ -55,6 +115,26 @@ header {
   color: #2a9d8f;
 }
 
+.left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* Adjust this value based on the width of your right section */
+  font-size: 1.6rem;
+}
+
+#shield {
+  font-size: 1.8rem;
+  color: #666;
+  margin-right: -15px;
+}
+
 .search {
   display: flex;
   align-items: center;
@@ -63,7 +143,9 @@ header {
   gap: 10px;
   padding: 5px 10px;
   border: 1px solid #ccc;
-  max-width: 300px;
+  flex: 0.7;  /* allows the search bar to grow and fill available space */
+  min-width: 200px; /* ensures the search bar doesn't shrink too much */
+  margin-left: 200px;
 }
 
 .search i {
@@ -74,4 +156,212 @@ header {
 .search span {
   font-size: 1.4rem;
   color: #333;
+  flex: 1;
+  text-align: center;
+} 
+
+.main {
+  /*align-items: center; */
+  gap: 30px;
+  padding: 5px;
+  display: flex;
+  /*min-height: 100vh;*/
+  justify-content: center;
+  max-width: 1200px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.left-section {
+  /*flex: 1;*/
+  flex: 0 0 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 100px;
+}
+
+.main p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.main .text {
+  flex: 1;
+}
+
+.main h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.main h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.email {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  border: 1px solid #ddd;
+  padding: 1.5px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.email input {
+  padding: 12px 15px;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 1rem;
+} 
+
+.email button {
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4a9b9e;
+}
+
+.brands {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.brands h1 {
+  font-size: 1.5rem;
+  color: #1a3a42;
+}
+
+.brands img {
+ width: 20px; 
+ margin-right: -30px;
+}
+
+.customer {
+  /*flex: 1;*/
+  flex: 0 0 420px;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-left: 20px;
+}
+
+.custom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.customer img {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.customer .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.customer .name {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.customer .subname {
+  font-size: 1rem;
+  color: #999;
+}
+
+.invoice {
+  margin-bottom: 20px;
+  padding: 10px;
+  color: #000;
+  border-radius: 8px;
+  border: 0.3px solid #000;
+}
+
+.invoice p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.invoice h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 0.3px solid #5acdc6;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 0.3px solid #000;
+  border-radius:8px;
+  margin-bottom: 15px;
+}
+
+.crd {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.option input {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4a9b9e;
+  border-radius: 50%;
+}
+
+.pay button {
+  width: 100%;
+  padding: 15px;
+  background: #1a3a42;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cov {
+  padding-right: 100px ;
 }
