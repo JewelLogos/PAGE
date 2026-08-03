@@ -7,10 +7,17 @@
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #f4f6f9;
-  min-height: 100vh;  /*ensures the body takes up the full height of the viewport*/
+  min-height: 100vh;
+  /*ensures the body takes up the full height of the viewport*/
   overflow-x: hidden;
 }
 
@@ -20,22 +27,24 @@ html {
 
 header {
   position: static;
-  top: 60px;
+/*  top: 60px;
   left: 0;
-  right: 0;
+  right: 0; */
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
   display: flex;
   padding: 1.2rem 5%;
   justify-content: space-between;
+  margin-top: 1.5rem;
 }
 
 header .logo {
   display: flex;
   align-items: center;
   gap: 8px;
-  white-space: nowrap; /* preventing text from wrapping to the next line */
+  white-space: nowrap;
+  /* preventing text from wrapping to the next line */
 }
 
 header .logo a {
@@ -48,8 +57,10 @@ header .logo a {
 header .navbar {
   display: flex;
   gap: 2rem;
-  white-space: nowrap; /* preventing text from wrapping to the next line */
-  padding-right: 400px; /* Adjust this value based on the width of your left section */
+  white-space: nowrap;
+  /* preventing text from wrapping to the next line */
+  padding-right: 400px;
+  /* Adjust this value based on the width of your left section */
 }
 
 header .navbar a {
@@ -62,7 +73,8 @@ header .navbar a {
 header .enter {
   display: flex;
   gap: 2rem;
-  white-space: nowrap; /* preventing text from wrapping to the next line */
+  white-space: nowrap;
+  /* preventing text from wrapping to the next line */
 }
 
 header .enter a {
@@ -73,17 +85,20 @@ header .enter a {
   font-size: 1.4rem;
   border: 0.3px solid #000;
   border-radius: 12px;
-  vertical-align: middle; /* Aligns the text vertically in the middle */
+  vertical-align: middle;
+  /* Aligns the text vertically in the middle */
 }
 
 .top {
-  display: flex;   /*makes all the lements stay on a line*/
+  display: flex;
+  /*makes all the lements stay on a line*/
   position: static;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 0 12px;     /*gives space all around the header*/
+  padding: 0 12px;
+  /*gives space all around the header*/
   height: 50px;
   gap: 8px;
   align-items: center;
@@ -125,7 +140,8 @@ header .enter a {
 .right {
   display: flex;
   gap: 10px;
-  margin-left: auto; /* Adjust this value based on the width of your right section */
+  margin-left: auto;
+  /* Adjust this value based on the width of your right section */
   font-size: 1.6rem;
 }
 
@@ -141,15 +157,17 @@ header .enter a {
   border-radius: 20px;
   background: #f1f1f1;
   gap: 10px;
-  padding: 5px 10px;
+  padding: 3px 10px;
   border: 1px solid #ccc;
-  flex: 0.7;  /* allows the search bar to grow and fill available space */
-  min-width: 200px; /* ensures the search bar doesn't shrink too much */
+  flex: 0.7;
+  /* allows the search bar to grow and fill available space */
+  min-width: 200px;
+  /* ensures the search bar doesn't shrink too much */
   margin-left: 200px;
 }
 
 .search i {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #666;
 }
 
@@ -158,33 +176,29 @@ header .enter a {
   color: #333;
   flex: 1;
   text-align: center;
-} 
+}
 
 .main {
-  /*align-items: center; */
-  gap: 30px;
-  padding: 5px;
+  gap: 45px;
+  padding: 0 5%;
   display: flex;
-  /*min-height: 100vh;*/
   justify-content: center;
+  align-items: flex-start;
   max-width: 1200px;
-  margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  }
+  margin: 4rem auto 0;
+}
 
 .left-section {
-  /*flex: 1;*/
   flex: 0 0 520px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding-left: 100px;
+  padding-left: 0;
 }
 
 .main p {
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* increase body paragraph size for balance with large headings */
 }
 
 .main .text {
@@ -192,14 +206,14 @@ header .enter a {
 }
 
 .main h1 {
-  font-size: 3.5rem;
+  font-size: 4.2rem;
   font-weight: bold;
   color: #000;
   margin-bottom: 5px;
 }
 
 .main h2 {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   font-weight: bold;
   color: #000;
   margin-top: 0px;
@@ -221,7 +235,7 @@ header .enter a {
   border: 1px solid white;
   border-radius: 4px;
   font-size: 1rem;
-} 
+}
 
 .email button {
   padding: 12px 20px;
@@ -248,18 +262,19 @@ header .enter a {
 }
 
 .brands img {
- width: 20px; 
- margin-right: -30px;
+  width: 20px;
+  margin-right: -30px;
 }
 
 .customer {
-  /*flex: 1;*/
   flex: 0 0 420px;
   background: white;
   border-radius: 12px;
   padding: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-left: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  min-width: 420px;
+  max-width: 420px;
 }
 
 .custom {
@@ -270,9 +285,6 @@ header .enter a {
 }
 
 .customer img {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
   width: 50px;
   height: 50px;
   border-radius: 8px;
@@ -284,6 +296,9 @@ header .enter a {
   flex-direction: column;
   gap: 5px;
   margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+  flex: 1;
 }
 
 .customer .name {
@@ -330,7 +345,7 @@ header .enter a {
   align-items: center;
   padding: 12px;
   border: 0.3px solid #000;
-  border-radius:8px;
+  border-radius: 8px;
   margin-bottom: 15px;
 }
 
@@ -363,5 +378,103 @@ header .enter a {
 }
 
 .cov {
-  padding-right: 100px ;
+  padding-right: 100px;
+}
+
+.middle {
+  padding: 3.2rem 3.2rem;
+  width: min(95vw, 1080px);
+  max-width: 1080px;
+  margin: 5rem auto 6rem;
+  background: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.8rem; /* space between headings and cards */
+}
+
+.middle .free {
+  text-align: left;
+  float: none;
+}
+
+.middle .free h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1.6rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.middle .free p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.5rem; /* increase paragraph size for better balance */
+}
+
+.middle .free i {
+  font-size: 2.5rem;
+  color: #4a9b9e;
+  margin-bottom: 1rem;
+}
+
+.first {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr; /* give headline more room */
+  gap: 4rem;
+  align-items: start;
+}
+
+.first .payment {
+  text-align: left;
+  float: none;
+  padding: 2rem;
+  padding: 0 2rem 2rem;
+}
+
+.first .design {
+  text-align: left;
+  float: none;
+  padding: 0 2rem 2rem;
+  max-width: 520px;
+}
+
+.first .payment h5 {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1.6rem;
+  color: #4a9b9e;
+  margin-bottom: 0.6rem;
+  line-height: 1.15;
+  margin-top: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.12rem;
+}
+
+.first .payment h2 {
+  font-size: 4.2rem;
+  line-height: 1.03;
+  margin-bottom: 0.6rem;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.first .payment p {
+  color: #666;
+  line-height: 1.35;
+  font-size: 1.15rem;
+}
+.first .design p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.8rem; /* increased for better balance with heading */
 }
