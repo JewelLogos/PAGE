@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do-List</title>
+</head>
+
+<body>
+  <h1>JavaScript Project</h1>
+  <h2>To-Do List</h2>
+
+  <!-- Text box where the user types a new task -->
+  <input id="task" placeholder="New task">
+
+  <!-- Calls addTask() whenever it's clicked -->
+  <button onclick="addTask()">Add</button>
+
+  <!-- Empty list container. JS will fill this with <li> items -->
+  <ul id="list"></ul>
+
+  <!-- Calls clearAll() to wipe every task -->
+  <button onclick="clearAll()">Clear All</button>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
