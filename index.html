@@ -10,132 +10,55 @@
 </head>
 
 <body>
-  <section class="top">
-
-    <div class="head">
-
-      <div class="left">
-        <i class="fas fa-circle red"></i>
-        <i class="fas fa-circle yellow"></i>
-        <i class="fas fa-circle green"></i>
-
-        <i class="fas fa-columns"></i>
-
-        <i class="fas fa-chevron-left"></i>
-        <i class="fas fa-chevron-right"></i>
-      </div>
-
-      <i class="fas fa-shield-alt" id="shield"></i>
-
-      <div class="search">
-        <i class="fas fa-lock"></i>
-        <span>finpay.com</span>
-        <i class="fas fa-redo"></i>
-      </div>
-
-      <div class="right">
-        <i class="fas fa-circle-down"></i>
-        <i class="fas fa-upload"></i>
-        <i class="fas fa-plus"></i>
-        <i class="fas fa-window-restore"></i>
-      </div>
-    </div>
-  </section>
-
   <header>
 
-    <div class="logo">
-      <img src="assets/finpay logo.PNG" alt="logo">
-      <a href="#finpay">Finpay</a>
-    </div>
-
     <nav class="navbar">
-      <a href="#products">Products</a>
-      <a href="#customers">Customers</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#learn">Learn</a>
+      <div class="logo">
+        <img src="assets/finpay logo.PNG" alt="logo">
+        <a href="#finpay">Finpay</a>
+      </div>
+
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#customers">Customers</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#learn">Learn</a></li>
+      </ul>
+
+      <div class="enter">
+        <a href="#login" class="log">Login</a>
+        <a href="#sign up" class="sign">Sign up</a>
+      </div>
     </nav>
 
-    <div class="enter">
-      <a href="#login">Login</a>
-      <a href="#sign up" style="background-color: #5acdc6;">Sign up</a>
-    </div>
-  </header>
-
-  <section class="main">
     <div class="left-section">
       <div class="text">
-
         <h1>Get paid early</h1>
         <h2>save automatically</h2>
         <h2>all your pay.</h2>
         <p>Supports small businesses with simple invoicing,</p>
         <p>powerful integrations, and cash flow management tools.</p>
-      </div>
 
-      <div class="email">
+        <div class="email-box">
+          <input type="email" placeholder="Your business email">
+          <button>Get started
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </button>
+        </div>
 
-        <input type="email" placeholder="Your business email">
-        <button>Get started
-          <i class="fas fa-arrow-up-right-from-square"></i>
-        </button>
-      </div>
-
-      <div class="brands">
-
-        <h1>Klarna.</h1>
-        <h1>coinbase</h1>
-        <img src="assets/paw.PNG" alt="paw">
-        <h1>instacart</h1>
-      </div>
-    </div>
-
-    <div class="customer">
-      <div class="custom">
-        <img src="assets/dipa.PNG" alt="dipa">
-        <div class="text">
-          <span class="name">Dipa Inhouse</span>
-          <span class="subname">dipainhouse@gmail.com</span>
+        <div class="iconss">
+          <h1>Klarna.</h1>
+          <h1>coinbase</h1>
+          <img src="assets/paw.PNG" alt="paw">
+          <h1>instacart</h1>
         </div>
       </div>
 
-      <div class="cov">
-
-        <div class="invoice">
-          <p>Invoice</p>
-          <h2>$1,876,580</h2>
-          <p>April 21, 2024</p>
-        </div>
-
-        <div class="card">
-          <div class="crd">
-            <i class="fas fa-credit-card"></i>
-            <span>Credit Card</span>
-          </div>
-          <label class="option">
-            <input type="radio" name="payment">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-
-        <div class="account">
-          <div class="crd">
-            <i class="fas fa-bank"></i>
-            <span>Bank Account</span>
-          </div>
-          <label class="option">
-            <input type="radio" name="payment">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-
-        <div class="pay">
-          <button>Pay</button>
-        </div>
+      <div class="invoice">
+        <img src="/assets/invoice.png" alt="invoice">
       </div>
     </div>
-  </section>
-
+  </header>
 
   <section class="middle">
     <div class="first">
@@ -189,31 +112,32 @@
     </div>
 
     <div class="why-grid">
-      <div class="why-card stat-card">
-        <span class="stat-number">3k+</span>
-        <p>Businesses already running on Finpay</p>
+      <div class="why-card-stat-card">
+        <span class="stat-number"> 3k+ </span>
+        <p>Businesses already running <br>on Finpay</p>
       </div>
 
-      <div class="why-card feature-card">
-        <div>
-          <h3>Instant Withdraw your funds</h3>
-          <h3>at any time</h3>
-        </div>
+      <div class="why-card-stat-card">
+        <h3>Instant Withdraw your funds</h3>
+        <h3>at any time</h3>
+
         <div class="feature-image">
           <img src="assets/x2.PNG" alt="x">
           <img src="assets/arrow.PNG" alt="">
           <img src="assets/circle.PNG" alt="circle">
         </div>
       </div>
+    </div>
 
-      <div class="why-card text-card">
-        <h3>No asset volatility</h3>
-        <p>Generate returns on your</p>
-        <p>cash reserves without making</p>
-        <p>any investments.</p>
+    <div class="sec">
+      <div class="text-card">
+        <p>No asset volatility</p>
+        <span>Generate returns on your</span> <br>
+        <span>cash reserves without making</span> <br>
+        <span>any investments.</span>
       </div>
 
-      <div class="why-card chart-card">
+      <div class="chart-card">
         <div class="chart-header">
           <div class="left-block">
             <span>Summary</span>
@@ -238,27 +162,27 @@
 
   <section class="step">
     <p>STEP</p>
-    <span>Maximize your returns with a</span>
+    <span>Maximize your returns with a</span> <br>
     <span>Reserve account that generates.</span>
     <div class="bucket">
       <div class="no">
         <span class="figure">1</span>
         <h4>Open your account</h4>
-        <p>Sign up to finpay and set your account</p>
+        <p>Sign up to finpay and set your account</p> <br>
         <p>from the dashboard.</p>
       </div>
 
       <div class="no">
         <span class="figure">2</span>
         <h4>Transfer your money</h4>
-        <p>Move money from to another account into</p>
+        <p>Move money from to another account into</p> <br>
         <p>and start to earning up.</p>
       </div>
 
       <div class="no">
         <span class="figure">3</span>
         <h4>Watch your balance grow</h4>
-        <p>Accessed instantly and remain insulated</p>
+        <p>Accessed instantly and remain insulated</p> <br>
         <p>from market volatility.</p>
       </div>
 
@@ -289,9 +213,9 @@
       </div>
     </div>
 
-    <div class="just">
+    <div class="justy">
 
-      <div class="mission-text">
+      <div class="mission-texts">
         <h4>CHOOSE PLAN:</h4>
       </div>
 
@@ -303,7 +227,6 @@
               &pound;2.99
               <small>/ month</small>
             </p>
-            <i class="fas fa-long-arrow-right"></i>
           </div>
         </div>
         <div class="premium">
@@ -313,7 +236,6 @@
               &pound;6.99
               <small>/ month</small>
             </p>
-            <i class="fas fa-arrow-right-long"></i>
           </div>
         </div>
       </div>
@@ -323,16 +245,16 @@
 
   <section class="try">
     <div class="try-text">
-      <p>TRY IT NOW</p>
+      <p>TRY IT NOW</p> <br>
       <h3>Ready to level up your</h3>
-      <h3>payment process ?</h3>
-        <h6>Supports small businesses with simple invoicing,powerful</h6>
-        <h6>integrations, and cash flow management tools.</h6>
+      <h3>payment process ?</h3> <br>
+      <h6>Supports small businesses with simple invoicing,powerful</h6>
+      <h6>integrations, and cash flow management tools.</h6>
     </div>
 
     <div class="try-buttons">
       <a href="#get started now">Get Started Now</a>
-      <a href="#learn more">Learn More <i class="fas fa-arrow-right-long"></i></a>
+      <a href="#learn more" class="lm">Learn More <i class="fas fa-arrow-right-long"></i></a>
     </div>
 
   </section>
